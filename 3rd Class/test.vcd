@@ -1,0 +1,43 @@
+$date
+	Mon May 24 19:30:01 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module barrel_shifter_tb $end
+$var wire 8 ! y [7:0] $end
+$var reg 8 " a [7:0] $end
+$var reg 3 # amt [2:0] $end
+$scope module circuit1 $end
+$var wire 8 $ a [7:0] $end
+$var wire 3 % amt [2:0] $end
+$var reg 8 & y [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10000111 &
+b1 %
+b1111 $
+b1 #
+b1111 "
+b10000111 !
+$end
+#20000
+b11000011 !
+b11000011 &
+b10 #
+b10 %
+#40000
+b11100001 !
+b11100001 &
+b11 #
+b11 %
+#60000
+b100 #
+b100 %
+#100000
