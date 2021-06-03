@@ -1,0 +1,125 @@
+$date
+	Tue Jun 01 21:54:21 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module stopwatch_tb $end
+$var wire 1 ! max_tick $end
+$var wire 4 " d [3:0] $end
+$var reg 1 # clk $end
+$var reg 1 $ reset $end
+$scope module circuit1 $end
+$var wire 1 # clk $end
+$var wire 4 % d [3:0] $end
+$var wire 1 $ reset $end
+$var wire 4 & second_counter_next [3:0] $end
+$var wire 23 ' ms_next [22:0] $end
+$var wire 1 ! max_tick $end
+$var reg 23 ( ms_reg [22:0] $end
+$var reg 4 ) second_counter_reg [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 )
+b0 (
+b1 '
+b0 &
+b0 %
+1$
+0#
+b0 "
+0!
+$end
+#10
+1#
+#20
+0$
+0#
+#30
+b10 '
+b1 (
+1#
+#40
+0#
+#50
+b1 &
+b11 '
+b10 (
+1#
+#60
+0#
+#70
+b1 "
+b1 %
+b1 )
+b100 '
+b11 (
+1#
+#80
+0#
+#90
+b101 '
+b100 (
+1#
+#100
+0#
+#110
+b110 '
+b101 (
+1#
+#120
+0#
+#130
+b111 '
+b110 (
+1#
+#140
+0#
+#150
+b1000 '
+b111 (
+1#
+#160
+0#
+#170
+b1001 '
+b1000 (
+1#
+#180
+0#
+#190
+b1010 '
+b1001 (
+1#
+#200
+0#
+#210
+b1011 '
+b1010 (
+1#
+#220
+0#
+#230
+b1100 '
+b1011 (
+1#
+#240
+0#
+#250
+b1101 '
+b1100 (
+1#
+#260
+0#
+#270
+b1110 '
+b1101 (
+1#
+#280
+0#

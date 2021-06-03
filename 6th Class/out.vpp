@@ -1,0 +1,122 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "c:\iverilog\lib\ivl\system.vpi";
+:vpi_module "c:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "c:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "c:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "c:\iverilog\lib\ivl\va_math.vpi";
+S_0000027025a2dd10 .scope module, "stopwatch_tb" "stopwatch_tb" 2 3;
+ .timescale -9 -9;
+v0000027025acc3e0_0 .var "clk", 0 0;
+v0000027025acc5c0_0 .net "d", 3 0, L_0000027025a78730;  1 drivers
+v0000027025acc160_0 .net "max_tick", 0 0, L_0000027025a725d0;  1 drivers
+v0000027025acc200_0 .var "reset", 0 0;
+S_0000027025a2dea0 .scope module, "circuit1" "stopwatch" 2 10, 3 1 0, S_0000027025a2dd10;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /OUTPUT 4 "d";
+    .port_info 3 /OUTPUT 1 "max_tick";
+P_0000027025a694e0 .param/l "DVSR" 1 3 20, +C4<00000000000000000000000000000010>;
+L_0000027025a78730 .functor BUFZ 4, v0000027025acc0c0_0, C4<0000>, C4<0000>, C4<0000>;
+L_0000027025acc868 .functor BUFT 1, C4<00000000000000000000001>, C4<0>, C4<0>, C4<0>;
+v0000027025a2a050_0 .net/2u *"_ivl_0", 22 0, L_0000027025acc868;  1 drivers
+v0000027025a42910_0 .net *"_ivl_10", 0 0, L_0000027025acb940;  1 drivers
+L_0000027025acc940 .functor BUFT 1, C4<0001>, C4<0>, C4<0>, C4<0>;
+v0000027025acc480_0 .net/2u *"_ivl_12", 3 0, L_0000027025acc940;  1 drivers
+v0000027025acbbc0_0 .net *"_ivl_14", 3 0, L_0000027025acb9e0;  1 drivers
+L_0000027025acc988 .functor BUFT 1, C4<1010>, C4<0>, C4<0>, C4<0>;
+v0000027025acc340_0 .net/2u *"_ivl_20", 3 0, L_0000027025acc988;  1 drivers
+v0000027025acbc60_0 .net *"_ivl_22", 0 0, L_0000027025a71d10;  1 drivers
+L_0000027025acc9d0 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v0000027025acbb20_0 .net/2u *"_ivl_24", 0 0, L_0000027025acc9d0;  1 drivers
+L_0000027025acca18 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000027025acba80_0 .net/2u *"_ivl_26", 0 0, L_0000027025acca18;  1 drivers
+v0000027025acc2a0_0 .net *"_ivl_4", 31 0, L_0000027025acc660;  1 drivers
+L_0000027025acc8b0 .functor BUFT 1, C4<000000000>, C4<0>, C4<0>, C4<0>;
+v0000027025acbd00_0 .net *"_ivl_7", 8 0, L_0000027025acc8b0;  1 drivers
+L_0000027025acc8f8 .functor BUFT 1, C4<00000000000000000000000000000010>, C4<0>, C4<0>, C4<0>;
+v0000027025acc020_0 .net/2u *"_ivl_8", 31 0, L_0000027025acc8f8;  1 drivers
+v0000027025acbee0_0 .net "clk", 0 0, v0000027025acc3e0_0;  1 drivers
+v0000027025acbda0_0 .net "d", 3 0, L_0000027025a78730;  alias, 1 drivers
+v0000027025acbe40_0 .net "max_tick", 0 0, L_0000027025a725d0;  alias, 1 drivers
+v0000027025acc520_0 .net "ms_next", 22 0, L_0000027025acb8a0;  1 drivers
+v0000027025acc700_0 .var "ms_reg", 22 0;
+v0000027025acbf80_0 .net "reset", 0 0, v0000027025acc200_0;  1 drivers
+v0000027025acc7a0_0 .net "second_counter_next", 3 0, L_0000027025a71a90;  1 drivers
+v0000027025acc0c0_0 .var "second_counter_reg", 3 0;
+E_0000027025a6a0a0 .event posedge, v0000027025acbf80_0, v0000027025acbee0_0;
+L_0000027025acb8a0 .arith/sum 23, v0000027025acc700_0, L_0000027025acc868;
+L_0000027025acc660 .concat [ 23 9 0 0], v0000027025acc700_0, L_0000027025acc8b0;
+L_0000027025acb940 .cmp/eq 32, L_0000027025acc660, L_0000027025acc8f8;
+L_0000027025acb9e0 .arith/sum 4, v0000027025acc0c0_0, L_0000027025acc940;
+L_0000027025a71a90 .functor MUXZ 4, v0000027025acc0c0_0, L_0000027025acb9e0, L_0000027025acb940, C4<>;
+L_0000027025a71d10 .cmp/eq 4, v0000027025acc0c0_0, L_0000027025acc988;
+L_0000027025a725d0 .functor MUXZ 1, L_0000027025acca18, L_0000027025acc9d0, L_0000027025a71d10, C4<>;
+    .scope S_0000027025a2dea0;
+T_0 ;
+    %wait E_0000027025a6a0a0;
+    %load/vec4 v0000027025acbf80_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 23;
+    %assign/vec4 v0000027025acc700_0, 0;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v0000027025acc0c0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0000027025acc520_0;
+    %assign/vec4 v0000027025acc700_0, 0;
+    %load/vec4 v0000027025acc7a0_0;
+    %assign/vec4 v0000027025acc0c0_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0000027025a2dd10;
+T_1 ;
+    %load/vec4 v0000027025acc3e0_0;
+    %inv;
+    %store/vec4 v0000027025acc3e0_0, 0, 1;
+    %delay 10, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0000027025a2dd10;
+T_2 ;
+    %vpi_call 2 18 "$dumpfile", "test.vcd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000027025a2dd10 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000027025acc3e0_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0000027025acc200_0, 0;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000027025acc200_0, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %vpi_call 2 45 "$finish" {0 0 0};
+    %end;
+    .thread T_2;
+    .scope S_0000027025a2dd10;
+T_3 ;
+    %vpi_call 2 49 "$monitor", "clk = %b, reset = %b, d = %b max_tick = %b", v0000027025acc3e0_0, v0000027025acc200_0, v0000027025acc5c0_0, v0000027025acc160_0 {0 0 0};
+    %end;
+    .thread T_3;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "stopwatch_tb.v";
+    "stopwatch.v";
